@@ -1,0 +1,32 @@
+# PyCharm
+.idea/
+*.iml
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# Docker
+*.tar
+*.log
+
+# Данные баз (чтобы не заливать гигабайты)
+*.db
+*.sqlite
+
+# Данные Docker-контейнеров (не отправляем!)
+Docker/**/data/
+Docker/**/clickhouse_data/
+Docker/**/pgdata/
+Docker/**/logs/
+AirFlow/logs/
+
+# Вложенные репозитории и старые папки
+Modul_4_GIT/team_project/
+Repos/
+AirFlow/logs/
+
+# Игнорируем данные PostgreSQL и ClickHouse
+Docker/pg+ch/postgres_data/
+Docker/pg+ch/clickhouse_data/
