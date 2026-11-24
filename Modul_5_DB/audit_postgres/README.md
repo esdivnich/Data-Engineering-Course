@@ -17,3 +17,4 @@
 
 - **«trigger already exists»** — значит, запущен только `CREATE TRIGGER`, а `DROP TRIGGER IF EXISTS` не выполнился. Решение: ALT+X или выделить оба куска и запустить вместе.
 - **В журнале изменений нет INSERT или DELETE** — скорее всего, функция и/или триггер были только на `UPDATE`. Нужно проверить, что в функции есть конструкция с кодом `IF TG_OP = 'UPDATE'`, `ELSIF TG_OP = ....` и тд, в `CREATE TRIGGER` написано `AFTER INSERT OR UPDATE OR DELETE`
+
